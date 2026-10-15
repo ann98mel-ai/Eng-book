@@ -3,46 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grammar Rules</title>
+    <title>Grammar Rules - Chapter 1</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Grammar Reference</h1>
-        <nav>
-            <a href="index.html">Chapters</a>
-            <a href="rules.html">Grammar Rules</a>
-            <a href="exercises.html">Exercises</a>
-        </nav>
+    <header class="app-header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">📘</span>
+                <span class="logo-text">Grammar Rules</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Chapters</a>
+                <a href="rules.html" class="active">Grammar Rules</a>
+                <a href="exercises.html">Exercises</a>
+            </nav>
+        </div>
     </header>
 
-    <main class="container">
+    <main class="main-container">
         <!-- Chart 1-1 -->
-        <section id="chart1-1" class="card">
-            <h2>1-1 Simple Present and Present Progressive</h2>
-            <div class="rule-content">
-                <p><strong>SIMPLE PRESENT:</strong> Expresses general statements of fact, general truths, and habitual or everyday activities.</p>
-                <ul>
-                    <li><em>Water consists of hydrogen and oxygen.</em></li>
-                    <li><em>I get up at seven every morning.</em></li>
-                </ul>
-                <p><strong>PRESENT PROGRESSIVE:</strong> Expresses an activity that is in progress right now at the moment of speaking, or temporary activities.</p>
-                <ul>
-                    <li><em>The students are sitting at their desks right now.</em></li>
-                    <li><em>I am taking five courses this semester.</em></li>
-                </ul>
+        <article class="rule-card" id="chart1-1">
+            <div class="card-header">
+                <span class="badge-lg">1-1</span>
+                <h2>Simple Present and Present Progressive</h2>
             </div>
-        </section>
+
+            <div class="timeline-visual">
+                <div class="timeline-box">
+                    <h4>SIMPLE PRESENT</h4>
+                    <p class="timeline-graphic">PAST &bull;&bull;&bull; <strong>[NOW]</strong> &bull;&bull;&bull; FUTURE</p>
+                    <p>Expresses general truths, facts, and habits.</p>
+                    <ul>
+                        <li><em>Water consists of hydrogen and oxygen.</em> (General truth)</li>
+                        <li><em>I get up at seven every morning.</em> (Habit)</li>
+                    </ul>
+                </div>
+                <div class="timeline-box highlight">
+                    <h4>PRESENT PROGRESSIVE</h4>
+                    <p class="timeline-graphic">PAST &rarr; <strong>[IN PROGRESS NOW]</strong> &rarr; FUTURE</p>
+                    <p>Expresses a temporary activity happening right now.</p>
+                    <ul>
+                        <li><em>The students are sitting at their desks right now.</em></li>
+                        <li><em>I am taking five courses this semester.</em></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chart 1-2 -->
+        <article class="rule-card" id="chart1-2">
+            <div class="card-header">
+                <span class="badge-lg">1-2</span>
+                <h2>Simple Present and Present Progressive: Forms</h2>
+            </div>
+            
+            <div class="table-responsive">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Form</th>
+                            <th>Simple Present</th>
+                            <th>Present Progressive</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Affirmative</strong></td>
+                            <td>I/You/We/They <em>help</em>.<br>He/She/It <em>helps</em>.</td>
+                            <td>I <em>am helping</em>.<br>He/She/It <em>is helping</em>.<br>We/They <em>are helping</em>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Negative</strong></td>
+                            <td>I/We/They <em>do not help</em>.<br>He/She/It <em>does not help</em>.</td>
+                            <td>I <em>am not helping</em>.<br>He/She/It <em>is not helping</em>.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Question</strong></td>
+                            <td><em>Do</em> you help?<br><em>Does</em> he help?</td>
+                            <td><em>Are</em> you helping?<br><em>Is</em> he helping?</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
 
         <!-- Chart 1-3 -->
-        <section id="chart1-3" class="card">
-            <h2>1-3 Verbs Not Usually Used in the Progressive (Stative Verbs)</h2>
-            <div class="rule-content">
-                <p>Some verbs describe <strong>states</strong>, not actions, and are rarely used in progressive tenses.</p>
-                <p><strong>Common Stative Verbs:</strong> know, believe, understand, recognize, like, hate, prefer, belong, possess, contain, consist of.</p>
-                <p><em>Example:</em> I know your cousin. (INCORRECT: <s>I am knowing your cousin.</s>)</p>
+        <article class="rule-card" id="chart1-3">
+            <div class="card-header">
+                <span class="badge-lg">1-3</span>
+                <h2>Stative Verbs (Non-Progressive Verbs)</h2>
             </div>
-        </section>
+            <p>Stative verbs describe <strong>conditions or states</strong> that exist, not dynamic actions. They are rarely used in progressive tenses.</p>
+            
+            <div class="stative-grid">
+                <div class="stative-cat">
+                    <h4>Mental State</h4>
+                    <p>know, believe, understand, recognize, remember, think, suppose</p>
+                </div>
+                <div class="stative-cat">
+                    <h4>Emotional State</h4>
+                    <p>like, love, hate, dislike, fear, appreciate, want, prefer, need</p>
+                </div>
+                <div class="stative-cat">
+                    <h4>Possession</h4>
+                    <p>possess, own, belong, contain, consist of</p>
+                </div>
+                <div class="stative-cat">
+                    <h4>Sense Perception</h4>
+                    <p>taste, smell, hear, see, feel, look like, resemble</p>
+                </div>
+            </div>
+
+            <div class="callout callout-info">
+                <strong>Dual-Meaning Examples:</strong>
+                <ul>
+                    <li><em>I think that Mr. Liu is a good teacher.</em> (State = believe)</li>
+                    <li><em>I am thinking about my family right now.</em> (Action = thoughts in mind)</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- Chart 1-4 & 1-5 -->
+        <article class="rule-card" id="chart1-4">
+            <div class="card-header">
+                <span class="badge-lg">1-4 & 1-5</span>
+                <h2>Simple Past vs. Past Progressive</h2>
+            </div>
+            
+            <div class="rule-content">
+                <h3>Simple Past</h3>
+                <p>Indicates an activity that began and ended at a specific time in the past (e.g., <em>I walked to school yesterday</em>).</p>
+                
+                <h3>Past Progressive</h3>
+                <p>Indicates an action that was in progress at a particular time in the past when another action occurred.</p>
+                <div class="example-box">
+                    <p><strong>Example:</strong> <em>Rita was standing under a tree when it began to rain.</em></p>
+                    <p><small>Action 1 (In progress first): Standing under tree &bull; Action 2 (Interrupted): It began to rain.</small></p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Chart 1-6 -->
+        <article class="rule-card" id="chart1-6">
+            <div class="card-header">
+                <span class="badge-lg">1-6</span>
+                <h2>Unfulfilled Intentions: Was/Were Going To</h2>
+            </div>
+            <p>Used to express past intentions or plans that were <strong>not fulfilled</strong> (did not happen).</p>
+            <div class="example-box">
+                <p><em>Jack was going to go to the movie last night, but he changed his mind.</em></p>
+                <p><small>(Meaning: Jack planned to go, but he didn't go.)</small></p>
+            </div>
+        </article>
     </main>
 </body>
 </html>

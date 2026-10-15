@@ -1,51 +1,98 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Exercises</title>
+    <title>Interactive Exercises - Chapter 1</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Interactive Exercises</h1>
-        <nav>
-            <a href="index.html">Chapters</a>
-            <a href="rules.html">Grammar Rules</a>
-            <a href="exercises.html">Exercises</a>
-        </nav>
+    <header class="app-header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">✏️</span>
+                <span class="logo-text">Practice Hub</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Chapters</a>
+                <a href="rules.html">Grammar Rules</a>
+                <a href="exercises.html" class="active">Exercises</a>
+            </nav>
+        </div>
     </header>
 
-    <main class="container">
-        <!-- Exercise 1: Choose Option -->
-        <section class="card" id="ch1">
-            <h2>Task 1: Choose the correct completion</h2>
-
-            <div class="question" data-correct="a">
-                <p>1. In early summer, the sun ________ around 9:00 P.M. in my hometown.</p>
-                <label><input type="radio" name="q1" value="a"> sets</label><br>
-                <label><input type="radio" name="q1" value="b"> is setting</label>
+    <main class="main-container">
+        <!-- Exercise 1 -->
+        <section class="exercise-card" id="ex-1">
+            <div class="ex-header">
+                <h3>Exercise 1: Simple Present vs. Present Progressive</h3>
+                <p>Choose the correct verb form for each situation.</p>
             </div>
 
-            <div class="question" data-correct="b">
-                <p>2. Hurry! The rice ________ over onto the stove.</p>
-                <label><input type="radio" name="q2" value="a"> boils</label><br>
-                <label><input type="radio" name="q2" value="b"> is boiling</label>
+            <div class="question-item" data-correct="b">
+                <p>1. Kristin is in the shower. She ________ her hair right now.</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a"> washes</label>
+                    <label><input type="radio" name="q1" value="b"> is washing</label>
+                </div>
             </div>
 
-            <button onclick="checkMultipleChoice()">Check Multiple Choice</button>
-            <p id="mc-result" class="result"></p>
+            <div class="question-item" data-correct="a">
+                <p>2. Kristin ________ her hair every other day or so.</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a"> washes</label>
+                    <label><input type="radio" name="q2" value="b"> is washing</label>
+                </div>
+            </div>
+
+            <div class="question-item" data-correct="b">
+                <p>3. Hurry! The rice ________ over onto the stove.</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a"> boils</label>
+                    <label><input type="radio" name="q3" value="b"> is boiling</label>
+                </div>
+            </div>
+
+            <button class="btn btn-primary" onclick="checkChoiceQuestions()">Check Multiple Choice</button>
+            <div id="mc-score" class="score-display"></div>
         </section>
 
-        <!-- Exercise 2: Fill in blanks -->
-        <section class="card">
-            <h2>Task 2: Write the correct verb form</h2>
+        <!-- Exercise 2: Fill in the Blanks -->
+        <section class="exercise-card" id="ex-2">
+            <div class="ex-header">
+                <h3>Exercise 2: Write Correct Verb Forms (Chapter 1)</h3>
+                <p>Type the correct form of the verb in parentheses.</p>
+            </div>
 
-            <p>1. Kristin is in the shower. She <input type="text" data-answer="is washing"> (wash) her hair.</p>
-            <p>2. Kristin <input type="text" data-answer="washes"> (wash) her hair every other day or so.</p>
+            <div class="gap-item">
+                <p>1. Right now I <input type="text" data-answer="am sitting"> (sit) at my computer desk.</p>
+            </div>
+            <div class="gap-item">
+                <p>2. Water <input type="text" data-answer="consists"> (consist) of hydrogen and oxygen.</p>
+            </div>
+            <div class="gap-item">
+                <p>3. I <input type="text" data-answer="was going"> (go) to call you last night, but my phone died.</p>
+            </div>
 
-            <button onclick="checkGaps()">Check Written Answers</button>
-            <p id="gap-result" class="result"></p>
+            <button class="btn btn-primary" onclick="checkGapQuestions()">Check Fill-in Answers</button>
+            <div id="gap-score" class="score-display"></div>
+        </section>
+
+        <!-- Answer Keys / Self-Check (Accordion) -->
+        <section class="exercise-card">
+            <h3>🔑 Teacher's Answer Key (Self-Check)</h3>
+            <p>Click below to toggle answers for verification.</p>
+            <button class="btn btn-secondary" onclick="toggleAnswers()">Show / Hide Official Answers</button>
+            
+            <div id="answers-toggle" class="answers-box hidden">
+                <h4>Chapter 1 Official Key:</h4>
+                <ul>
+                    <li><strong>Chart 1-1:</strong> 1. is washing | 2. washes | 3. is boiling</li>
+                    <li><strong>Chart 1-3:</strong> 1. am sitting | 2. consists | 3. was going</li>
+                    <li><strong>Chart 1-5:</strong> Rita was standing under a tree when it began to rain.</li>
+                </ul>
+            </div>
         </section>
     </main>
 

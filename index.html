@@ -1,42 +1,99 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Grammar Textbook</title>
+    <title>English Grammar Interactive | Understanding and Using English Grammar</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>English Grammar Interactive</h1>
-        <nav>
-            <a href="index.html">Chapters</a>
-            <a href="rules.html">Grammar Rules</a>
-            <a href="exercises.html">Exercises</a>
-        </nav>
+    <header class="app-header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">📘</span>
+                <span class="logo-text">Azar Grammar 5th Ed.</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Chapters</a>
+                <a href="rules.html">Grammar Rules</a>
+                <a href="exercises.html">Exercises</a>
+            </nav>
+        </div>
     </header>
 
-    <main class="container">
-        <h2>Chapters & Units</h2>
-        
-        <div class="card">
-            <h3>Chapter 1: Present and Past; Simple and Progressive</h3>
-            <ul>
-                <li><a href="rules.html#chart1-1">1-1 Simple Present and Present Progressive</a></li>
-                <li><a href="rules.html#chart1-2">1-2 Simple Present vs Present Progressive Forms</a></li>
-                <li><a href="rules.html#chart1-3">1-3 Stative Verbs</a></li>
-                <li><a href="rules.html#chart1-4">1-4 Simple Past Tense</a></li>
-            </ul>
-            <a href="exercises.html#ch1" class="btn">Practice Chapter 1</a>
-        </div>
+    <main class="main-container">
+        <section class="hero-card">
+            <h1>Chapter 1: Present and Past; Simple and Progressive</h1>
+            <p>Master verb tenses, habitual activities, stative verbs, and past time clauses.</p>
+            <div class="hero-buttons">
+                <a href="rules.html" class="btn btn-primary">📖 Study Rules (Charts 1-1 – 1-6)</a>
+                <a href="exercises.html" class="btn btn-secondary">✏️ Interactive Practice</a>
+            </div>
+        </section>
 
-        <div class="card">
-            <h3>Chapter 2: Perfect and Perfect Progressive Tenses</h3>
-            <ul>
-                <li><a href="rules.html#chart2-3">2-3 Present Perfect: Since and For</a></li>
-                <li><a href="rules.html#chart2-4">2-4 Present Perfect: Unspecified Time</a></li>
-            </ul>
-            <a href="exercises.html#ch2" class="btn">Practice Chapter 2</a>
+        <h2 class="section-title">Chapter Contents (Pages 1–37)</h2>
+
+        <div class="grid-layout">
+            <div class="topic-card">
+                <span class="badge">Chart 1-1</span>
+                <h3>Simple Present & Present Progressive</h3>
+                <p>General truths, habits vs. actions in progress right now.</p>
+                <div class="card-footer">
+                    <a href="rules.html#chart1-1">Read Rule →</a>
+                    <a href="exercises.html#ex-1">Practice →</a>
+                </div>
+            </div>
+
+            <div class="topic-card">
+                <span class="badge">Chart 1-2</span>
+                <h3>Forms of Present Tenses</h3>
+                <p>Affirmative, Negative, and Question structures with Do/Does/Be.</p>
+                <div class="card-footer">
+                    <a href="rules.html#chart1-2">Read Rule →</a>
+                    <a href="exercises.html#ex-2">Practice →</a>
+                </div>
+            </div>
+
+            <div class="topic-card">
+                <span class="badge">Chart 1-3</span>
+                <h3>Stative Verbs (Non-Progressive)</h3>
+                <p>Verbs describing states (know, believe, belong) rather than actions.</p>
+                <div class="card-footer">
+                    <a href="rules.html#chart1-3">Read Rule →</a>
+                    <a href="exercises.html#ex-3">Practice →</a>
+                </div>
+            </div>
+
+            <div class="topic-card">
+                <span class="badge">Chart 1-4</span>
+                <h3>Simple Past Tense</h3>
+                <p>Completed actions in the past. Regular and Irregular verb forms.</p>
+                <div class="card-footer">
+                    <a href="rules.html#chart1-4">Read Rule →</a>
+                    <a href="exercises.html#ex-4">Practice →</a>
+                </div>
+            </div>
+
+            <div class="topic-card">
+                <span class="badge">Chart 1-5</span>
+                <h3>Simple Past vs. Past Progressive</h3>
+                <p>Interrupted past actions using When & While clauses.</p>
+                <div class="card-footer">
+                    <a href="rules.html#chart1-5">Read Rule →</a>
+                    <a href="exercises.html#ex-5">Practice →</a>
+                </div>
+            </div>
+
+            <div class="topic-card">
+                <span class="badge">Chart 1-6</span>
+                <h3>Unfulfilled Intentions</h3>
+                <p>Expressing past plans that didn't happen using Was/Were Going To.</p>
+                <div class="card-footer">
+                    <a href="rules.html#chart1-6">Read Rule →</a>
+                    <a href="exercises.html#ex-6">Practice →</a>
+                </div>
+            </div>
         </div>
     </main>
 </body>

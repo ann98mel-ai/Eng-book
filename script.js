@@ -1,43 +1,51 @@
-function checkMultipleChoice() {
-    let questions = document.querySelectorAll('.question');
-    let correctCount = 0;
+// Check Radio Button Questions
+function checkChoiceQuestions() {
+    let items = document.querySelectorAll('.question-item');
+    let correct = 0;
 
-    questions.forEach(q => {
-        let selected = q.querySelector('input[type="radio"]:checked');
-        let answer = q.getAttribute('data-correct');
-        
+    items.forEach(item => {
+        let selected = item.querySelector('input[type="radio"]:checked');
+        let answer = item.getAttribute('data-correct');
+
         if (selected && selected.value === answer) {
-            correctCount++;
-            q.style.backgroundColor = '#e8f8f5';
-            q.style.borderLeft = '4px solid #2ecc71';
+            correct++;
+            item.style.backgroundColor = 'var(--correct-bg)';
+            item.style.borderColor = 'var(--correct-border)';
         } else {
-            q.style.backgroundColor = '#fadbd8';
-            q.style.borderLeft = '4px solid #e74c3c';
+            item.style.backgroundColor = 'var(--wrong-bg)';
+            item.style.borderColor = 'var(--wrong-border)';
         }
     });
 
-    document.getElementById('mc-result').innerText = 
-        `Score: ${correctCount} / ${questions.length}`;
+    document.getElementById('mc-score').innerText = 
+        `Your Result: ${correct} / ${items.length}`;
 }
 
-function checkGaps() {
-    let inputs = document.querySelectorAll('input[type="text"]');
-    let correctCount = 0;
+// Check Fill-in Text Questions
+function checkGapQuestions() {
+    let inputs = document.querySelectorAll('.gap-item input[type="text"]');
+    let correct = 0;
 
     inputs.forEach(input => {
         let expected = input.getAttribute('data-answer').trim().toLowerCase();
         let userAns = input.value.trim().toLowerCase();
 
         if (userAns === expected) {
-            correctCount++;
-            input.style.borderColor = '#2ecc71';
-            input.style.backgroundColor = '#e8f8f5';
+            correct++;
+            input.style.borderColor = 'var(--correct-border)';
+            input.style.backgroundColor = 'var(--correct-bg)';
         } else {
-            input.style.borderColor = '#e74c3c';
-            input.style.backgroundColor = '#fadbd8';
+            input.style.borderColor = 'var(--wrong-border)';
+            input.style.backgroundColor = 'var(--wrong-bg)';
         }
     });
 
-    document.getElementById('gap-result').innerText = 
-        `Score: ${correctCount} / ${inputs.length}`;
+    document.getElementById('gap-score').innerText = 
+        `Your Result: ${correct} / ${inputs.length}`;
+}
+
+// Toggle Official Answers
+function toggleAnswers() {
+    let box = document.getElementById('answers-toggle');
+    box.classList.toggle('hidden');
 }

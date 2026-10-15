@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Exercises</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Exercises</h1>
+        <nav>
+            <a href="index.html">Chapters</a>
+            <a href="rules.html">Grammar Rules</a>
+            <a href="exercises.html">Exercises</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Exercise 1: Choose Option -->
+        <section class="card" id="ch1">
+            <h2>Task 1: Choose the correct completion</h2>
+
+            <div class="question" data-correct="a">
+                <p>1. In early summer, the sun ________ around 9:00 P.M. in my hometown.</p>
+                <label><input type="radio" name="q1" value="a"> sets</label><br>
+                <label><input type="radio" name="q1" value="b"> is setting</label>
+            </div>
+
+            <div class="question" data-correct="b">
+                <p>2. Hurry! The rice ________ over onto the stove.</p>
+                <label><input type="radio" name="q2" value="a"> boils</label><br>
+                <label><input type="radio" name="q2" value="b"> is boiling</label>
+            </div>
+
+            <button onclick="checkMultipleChoice()">Check Multiple Choice</button>
+            <p id="mc-result" class="result"></p>
+        </section>
+
+        <!-- Exercise 2: Fill in blanks -->
+        <section class="card">
+            <h2>Task 2: Write the correct verb form</h2>
+
+            <p>1. Kristin is in the shower. She <input type="text" data-answer="is washing"> (wash) her hair.</p>
+            <p>2. Kristin <input type="text" data-answer="washes"> (wash) her hair every other day or so.</p>
+
+            <button onclick="checkGaps()">Check Written Answers</button>
+            <p id="gap-result" class="result"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
